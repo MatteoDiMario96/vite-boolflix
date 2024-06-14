@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-    <button @click="store.GetApiFilmsList()">
+    <button @click="store.GetApiSeriesAndFilmsList()">
         Invia
     </button>
 </template>
