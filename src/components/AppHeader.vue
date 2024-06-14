@@ -1,5 +1,9 @@
 <script>
+import SearchBar from './SearchBar.vue';
 export default {
+    components:{
+        SearchBar,
+    },
     data() {
         return {
             
@@ -15,7 +19,9 @@ export default {
 </script>
 
 <template>
-
+    <header>
+        <SearchBar/>
+    </header>
 </template>
 
 <style scoped>
