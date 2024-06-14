@@ -27,7 +27,7 @@ export default {
                 Titolo:
             </h3>
             <h2>
-                {{ singleArticle.title }}
+                {{ singleArticle.title || singleArticle.name  }}
             </h2>
             </div>
             <div>
@@ -35,7 +35,7 @@ export default {
                 Titolo Originale:
             </h3>
             <h2>
-                {{ singleArticle.original_title }}
+                {{ singleArticle.original_title || singleArticle.original_name }}
             </h2>
             </div>
             <div>
