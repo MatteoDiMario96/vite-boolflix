@@ -1,8 +1,9 @@
 <script>
+import { store } from '../store';
 export default {
     data() {
         return {
-            
+            store,
         }
     },
     methods:{
@@ -15,7 +16,7 @@ export default {
 </script>
 
 <template>
-    <button>
+    <button @click="store.GetApiFilmsList()">
         Invia
     </button>
 </template>
