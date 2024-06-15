@@ -63,6 +63,10 @@ export default {
     div#card{
         display: flex;
         flex-direction: column;
+        border: 2px solid black;
+        border-radius: 1rem;
+        margin: 1rem;
+        padding: 1rem;
         div{
         display: flex;
         align-items: center;
