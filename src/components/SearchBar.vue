@@ -12,7 +12,7 @@ export default {
     created(){
     },
     updated(){
-        console.log(45454 ,store.arrayFilteredList)
+        
     }
 }
 </script>

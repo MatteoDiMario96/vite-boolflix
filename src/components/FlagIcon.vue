@@ -2,7 +2,7 @@
 export default {
     props:{
         linguaArticle:{
-            type: Object,
+            type: String,
         }
     },
     data() {
