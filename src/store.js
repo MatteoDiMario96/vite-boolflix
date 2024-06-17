@@ -3,15 +3,16 @@ import axios from 'axios';
 
 export const store = reactive({
     filterFilmsList: '',
-    arrayFilteredList: [],
+    arrayFilmFilteredList: [],
+    arraySerieFilteredList: [],
     arrayLanguages: [],
     languageChoosen: "",
     GetApiFilmsList(){
         axios.get(`https://api.themoviedb.org/3/search/movie?api_key=e99307154c6dfb0b4750f6603256716d&language=${this.languageChoosen}&query=${this.filterFilmsList}`)
         .then((response) => {
             // handle success
-            console.log(response.data);
-            this.arrayFilteredList = response.data
+            console.log(12212 ,response.data);
+            this.arrayFilmFilteredList = response.data
         })
         .catch(function (error) {
             // handle error
@@ -20,13 +21,11 @@ export const store = reactive({
         .finally(function () {
             // always executed
         });
-    },
-    GetApiSeriesAndFilmsList(){
-        axios.get(`https://api.themoviedb.org/3/search/multi?api_key=e99307154c6dfb0b4750f6603256716d&language=it-IT&query=${this.filterFilmsList}`)
+        axios.get(`https://api.themoviedb.org/3/search/tv?api_key=e99307154c6dfb0b4750f6603256716d&language=${this.languageChoosen}&query=${this.filterFilmsList}`)
         .then((response) => {
             // handle success
-            console.log(response.data);
-            this.arrayFilteredList = response.data
+            console.log(2323 ,response.data);
+            this.arraySerieFilteredList = response.data
         })
         .catch(function (error) {
             // handle error

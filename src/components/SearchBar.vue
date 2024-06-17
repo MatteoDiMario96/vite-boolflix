@@ -10,16 +10,15 @@ export default {
     methods:{
     },
     created(){
-
     },
     updated(){
-        
+        console.log(45454 ,store.arrayFilteredList)
     }
 }
 </script>
 
 <template>
-    <input type="text" id="filtered-film" name="filter-film" minlength="1" maxlength="50" v-model="store.filterFilmsList" @keyup.enter="store.GetApiSeriesAndFilmsList()">
+    <input type="text" id="filtered-film" name="filter-film" minlength="1" maxlength="50" v-model="store.filterFilmsList" @keyup.enter="store.GetApiFilmsList()">
 </template>
 
 <style scoped>

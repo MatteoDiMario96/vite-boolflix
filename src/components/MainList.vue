@@ -24,7 +24,16 @@ export default {
 <template>
     <section>
         <ul>
-            <ListSingleArticle v-for="film in store.arrayFilteredList.results" :key="film.id"
+            <h4>
+                Film
+            </h4>
+            <ListSingleArticle v-for="film in store.arrayFilmFilteredList.results" :key="film.id"
+            :singleArticle="film"
+            />
+            <h4>
+                Serie Tv
+            </h4>
+            <ListSingleArticle v-for="film in store.arraySerieFilteredList.results" :key="film.id"
             :singleArticle="film"
             />
         </ul>
