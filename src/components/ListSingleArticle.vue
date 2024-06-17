@@ -2,10 +2,12 @@
 import { store } from '../store';
 import FlagIcon from './FlagIcon.vue';
 import ImgArticle from './ImgArticle.vue';
+import VotoArticle from './VotoArticle.vue';
 export default {
     components:{
         FlagIcon,
         ImgArticle,
+        VotoArticle,
     },
     props:{
         singleArticle:{
@@ -54,12 +56,9 @@ export default {
                 />
             </div>
             <div>
-            <h3>
-                Voto:
-            </h3>
-            <h2>
-                {{ singleArticle.vote_average }}
-            </h2>
+                <VotoArticle
+                :votoArticle="singleArticle"
+                />
             </div>
             <div>
                 <ImgArticle
