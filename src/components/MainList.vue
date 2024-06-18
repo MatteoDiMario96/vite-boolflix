@@ -39,15 +39,15 @@ export default {
             />
             </div>
             <div v-else-if="(store.arrayFilmFilteredList.length === 0 && store.filterFilmsList === '' )">
-                <h4>
+                <h4 class="text-center">
                     Inizia a cercare un film o una serie TV
                 </h4>
             </div>
             <div v-else-if="(store.arrayFilmFilteredList.length === 0 && store.filterFilmsList.length > 0 )">
-                <h4>
+                <h4 class="text-center">
                     Premi enter o clicka invia per iniziare la ricerca.
                 </h4>
-                <h4>
+                <h4 class="text-center">
                     Per il  momento non ci sono risultati.
                 </h4>
             </div>
@@ -59,5 +59,12 @@ export default {
 <style lang="scss" scoped>
     ul{
         padding: 2rem;
+    }
+    div{
+        margin: 0 auto;
+        h4.text-center{
+            text-align: center;
+            margin-bottom: .5rem;
+        }
     }
 </style>
