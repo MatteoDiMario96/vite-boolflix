@@ -24,7 +24,7 @@ export default {
 <template>
     <section>
         <ul>
-            <div v-if="(store.arrayFilmFilteredList.length > 1)">
+            <div v-if="(store.arrayFilmFilteredList.length > 0 || store.arraySerieFilteredList.length > 0)">
             <h4>
                 Film
             </h4>
@@ -38,9 +38,12 @@ export default {
             :singleArticle="film"
             />
             </div>
+            <div v-else-if="(store.arrayFilmFilteredList.length === 0 && store.filterFilmsList === '' )">
+                Inizia a cercare un film o una serie TV
+            </div>
             <div v-else>
                 <h4>
-                    Inizia a cercare un film o una serie TV
+                La ricerca non ha prodotto risultati.
                 </h4>
             </div>
         </ul>
