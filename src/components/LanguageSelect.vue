@@ -15,7 +15,7 @@ export default {
         store.getLanguagesApi();
     },
     updated(){
-        console.log(23232 ,store.languageChoosen)
+        
     },
 }
 </script>
