@@ -89,7 +89,7 @@ export default {
             ul{
                 display: flex;
                 li{
-                    margin-right: .5rem;
+                    margin-right: 1rem;
                     .active{
                         font-weight: 800;
                         }
@@ -99,7 +99,7 @@ export default {
                     a{
                         color: $text_color_hover;
                         font-weight: 100;
-                        font-size: .8rem;
+                        font-size: .9rem;
                     }
                 }
             }
