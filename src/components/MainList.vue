@@ -24,21 +24,27 @@ export default {
 <template>
     <section>
         <ul>
-            <div v-if="(store.arrayFilmFilteredList.results.length > 1)">
+            <div v-if="(store.arrayFilmFilteredList.length > 1)">
             <h4>
                 Film
             </h4>
-            <ListSingleArticle v-for="film in store.arrayFilmFilteredList.results" :key="film.id"
+            <ListSingleArticle v-for="film in store.arrayFilmFilteredList" :key="film.id"
             :singleArticle="film"
             />
-            </div>
             <h4>
                 Serie Tv
             </h4>
-            <ListSingleArticle v-for="film in store.arraySerieFilteredList.results" :key="film.id"
+            <ListSingleArticle v-for="film in store.arraySerieFilteredList" :key="film.id"
             :singleArticle="film"
             />
+            </div>
+            <div v-else>
+                <h4>
+                    Inizia a cercare un film o una serie TV
+                </h4>
+            </div>
         </ul>
+        
     </section>
 </template>
 
