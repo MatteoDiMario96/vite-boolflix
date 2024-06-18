@@ -56,6 +56,18 @@ export default {
     
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../styles/variables' as *;
+    h3{
+        margin-bottom: .4rem;
+        margin-right: .7rem;
+        color: $color_text_img;
+    }
+    .fa-star{
+        color: $color_text_img;
+    }
+    .fa-star-of-life{
+        color: $color_text_img;
+    }
 
 </style>
