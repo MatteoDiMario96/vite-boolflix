@@ -31,4 +31,9 @@ export default {
 @use './styles/general.scss';
 @use './styles/variables' as *;
 @use './styles/mixins' as *;
+
+div#app{
+    height: 100vh;
+    width: 100vw;
+}
 </style>
