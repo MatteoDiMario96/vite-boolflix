@@ -21,6 +21,8 @@ export default {
     </button>
 </template>
 
-<style scoped>
-
+<style lang="scss" scoped>
+    button{
+        padding: .3rem .6rem;
+    }
 </style>

@@ -28,6 +28,8 @@ export default {
     </select>
 </template>
 
-<style scoped>
-
+<style lang="scss" scoped>
+    select{
+        padding: .3rem .6rem;
+    }
 </style>

@@ -21,6 +21,8 @@ export default {
     <input type="text" id="filtered-film" name="filter-film" minlength="1" maxlength="50" v-model="store.filterFilmsList" @keyup.enter="store.GetApiFilmsList()">
 </template>
 
-<style scoped>
-
+<style lang="scss" scoped>
+    input{
+        padding: .3rem .6rem;
+    }
 </style>
