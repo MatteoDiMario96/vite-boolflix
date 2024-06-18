@@ -13,6 +13,7 @@ export const store = reactive({
             // handle success
             console.log(12212 ,response.data.results);
             this.arrayFilmFilteredList = response.data.results
+            // this.filterFilmsList = '';
         })
         .catch(function (error) {
             // handle error
