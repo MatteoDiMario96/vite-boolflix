@@ -24,12 +24,14 @@ export default {
 <template>
     <section>
         <ul>
+            <div v-if="(store.arrayFilmFilteredList.results.length > 1)">
             <h4>
                 Film
             </h4>
             <ListSingleArticle v-for="film in store.arrayFilmFilteredList.results" :key="film.id"
             :singleArticle="film"
             />
+            </div>
             <h4>
                 Serie Tv
             </h4>
