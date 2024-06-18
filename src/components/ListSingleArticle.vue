@@ -65,6 +65,14 @@ export default {
                         :votoArticle="singleArticle"
                         />
                     </div>
+                    <div class="absolute descrizione">
+                        <h3>
+                            Descrizione:
+                        </h3>
+                        <h2>
+                            {{ singleArticle.overview }}
+                        </h2>
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,12 +89,11 @@ export default {
         div{
             margin-bottom: .3rem;
             h2{
-                font-size: 1.2rem;
-                text-decoration: underline;
+                font-size: 1.1rem;
                 color: $color_text_img;
             }
             h3{
-                font-size: 1rem;
+                font-size: .9rem;
                 margin-right: .7rem;
                 margin-bottom: .4rem;
                 color: $color_text_img;
@@ -100,20 +107,29 @@ export default {
             position: relative;
         }
         div.titolo{
-            bottom: 30px;
+            top: 130px;
             left: 20px;
         }
         div.titolo-originale{
-            bottom: 90px;
+            top: 20px;
             left: 20px;
         }
         div.lingua{
-            bottom: 150px;
+            top: 200px;
             left: 20px;
         }
         div.voto{
-            bottom: 210px;
+            top: 90px;
             left: 20px;
+        }
+        div.descrizione{
+            top: 230px;
+            left: 20px;
+            h2{
+                font-size: .8rem;
+                text-decoration: none;
+                margin-right: .3rem;
+            }
         }
         div.no-display{
             display: none;
