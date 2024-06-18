@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-    <img :src="`https://image.tmdb.org/t/p/w185/${ImgArticle.poster_path}`" alt="">
+    <img :src="`https://image.tmdb.org/t/p/w342/${ImgArticle.poster_path}`" :alt="ImgArticle.name">
 </template>
 
 <style lang="scss" scoped>
