@@ -33,7 +33,7 @@ export default {
         <div id="card">
             <div class="relative">
                 <ImgArticle
-                :ImgArticle="singleArticle"
+                :ImgArticle="singleArticle" id="img"
                 />
                 <div class="no-display">
                     <div class="absolute titolo">
@@ -136,6 +136,9 @@ export default {
         }
         div.relative:hover div.no-display{
             display: inline-block;
+        }
+        div.relative:hover #img{
+            opacity: .3;
         }
     }
 </style>
