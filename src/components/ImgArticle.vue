@@ -26,4 +26,8 @@ export default {
 
 <style lang="scss" scoped>
 
+img:hover{
+    opacity: .3;
+}
+
 </style>

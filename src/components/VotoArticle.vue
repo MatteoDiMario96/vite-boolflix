@@ -64,7 +64,7 @@ export default {
         color: $color_text_img;
     }
     .fa-star{
-        color: $color_text_img;
+        color: rgb(247, 247, 12);
     }
     .fa-star-of-life{
         color: $color_text_img;
