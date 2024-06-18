@@ -65,7 +65,7 @@ export default {
                 </li>
             </ul>
         </div>
-        <div>
+        <div id="input">
             <SearchBar/>
             <AppButton/>
             <LanguageSelect/>
@@ -105,6 +105,11 @@ export default {
             }
             img{
                 height: 100%;
+                margin-right: .5rem;
+            }
+        }
+        div#input{
+            *{
                 margin-right: .5rem;
             }
         }
