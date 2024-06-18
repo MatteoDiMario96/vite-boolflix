@@ -39,11 +39,16 @@ export default {
             />
             </div>
             <div v-else-if="(store.arrayFilmFilteredList.length === 0 && store.filterFilmsList === '' )">
-                Inizia a cercare un film o una serie TV
-            </div>
-            <div v-else>
                 <h4>
-                La ricerca non ha prodotto risultati.
+                    Inizia a cercare un film o una serie TV
+                </h4>
+            </div>
+            <div v-else-if="(store.arrayFilmFilteredList.length === 0 && store.filterFilmsList.length > 0 )">
+                <h4>
+                    Premi enter o clicka invia per iniziare la ricerca.
+                </h4>
+                <h4>
+                    Per il  momento non ci sono risultati.
                 </h4>
             </div>
         </ul>
