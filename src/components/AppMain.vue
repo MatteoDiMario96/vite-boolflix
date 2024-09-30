@@ -1,19 +1,20 @@
 <script>
 import MainList from './MainList.vue';
+import { store } from '../store';
 export default {
     components:{
         MainList,
     },
     data() {
         return {
-            
+            store,
         }
     },
     methods:{
 
     },
     created(){
-
+        
     }
 }
 </script>
@@ -28,9 +29,10 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/variables' as *;
     main{
-        height: calc(100% - 90px);
+        // height: calc(100% - 90px);
         background-color: #434343;
         color: $text_color_hover;
-        overflow-x: scroll;
+        // overflow-x: scroll;
+        width: 100vw;
     }
 </style>
