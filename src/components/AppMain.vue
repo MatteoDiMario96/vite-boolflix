@@ -29,7 +29,8 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/variables' as *;
     main{
-        // height: calc(100% - 90px);
+        height: calc(100% - 90px);
+        overflow-x: scroll;
         background-color: #434343;
         color: $text_color_hover;
         // overflow-x: scroll;
