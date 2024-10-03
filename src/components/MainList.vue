@@ -28,6 +28,12 @@ export default {
             arr.push(element);
         }
     },
+    moveToStart(arr) {
+        if (arr.length > 0) {
+            const element = arr.pop();
+            arr.unshift(element);
+        }
+    },
     scrollRight(section) {
         console.log('click destra');
         const slider = this.$refs[`${section}Slider`];
@@ -39,7 +45,7 @@ export default {
             // Delay per lo scorrimento automatico
             setTimeout(() => {
                 this.moveToEndSection(section, scrollWidth);
-            }, 3000); // Attendi 3 secondi solo per lo scorrimento automatico
+            }, 2000); // Attendi 3 secondi solo per lo scorrimento automatico
         } else {
             // Scorri immediatamente se è uno scroll manuale
             this.moveToEndSection(section, scrollWidth);
@@ -55,11 +61,11 @@ export default {
         if (!this.isManual) {
             // Delay per lo scorrimento automatico
             setTimeout(() => {
-                this.moveToEndSection(section, -scrollWidth);
-            }, 3000);
+                this.moveToStartSection(section, -scrollWidth);
+            }, 2000);
         } else {
             // Scorri immediatamente se è uno scroll manuale
-            this.moveToEndSection(section, -scrollWidth);
+            this.moveToStartSection(section, -scrollWidth);
         }
     },
     moveToEndSection(section, scrollWidth) {
@@ -77,16 +83,31 @@ export default {
             });
         }
     },
+    moveToStartSection(section, scrollWidth) {
+        const slider = this.$refs[`${section}Slider`];
+
+        if (slider.scrollLeft <= 0) {
+            if (section === 'film') {
+                this.moveToStart(this.store.arrayFilmFilteredList);
+            } else {
+                this.moveToStart(this.store.arraySerieFilteredList);
+            }
+
+            this.$nextTick(() => {
+                slider.scrollBy({ left: scrollWidth, behavior: 'smooth' });
+            });
+        }
+    },
     startScrolling(section) {
         console.log(`Starting scrolling for ${section}`);
         if (section === 'film') {
             this.filmScrollInterval = setInterval(() => {
                 this.scrollRight(section); // Scroll con delay
-            }, 5000);
+            }, 2000);
         } else if (section === 'tv') {
             this.tvScrollInterval = setInterval(() => {
                 this.scrollRight(section); // Scroll con delay
-            }, 5000);
+            }, 2500);
         }
     },
     stopScrolling(section) {
